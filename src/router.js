@@ -2,6 +2,7 @@ import {createRouter,createWebHashHistory} from "vue-router";
 // 1. 定义路由组件.
 // 也可以从其他文件导入
 import HelloWorld from './pages/HelloWorld.vue'
+import Setup from './pages/01.composition-setup.vue'
 
 // 2. 定义一些路由
 // 每个路由都需要映射到一个组件。
@@ -9,6 +10,7 @@ import HelloWorld from './pages/HelloWorld.vue'
 const routes = [
   { path: '/', redirect: '/hello' },
   { path: '/hello', component: HelloWorld },
+  { path: '/setup', component: Setup },
 ]
 
 // 3. 创建路由实例并传递 `routes` 配置
