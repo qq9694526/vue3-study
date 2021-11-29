@@ -5,6 +5,7 @@ import HelloWorld from './pages/HelloWorld.vue'
 import Setup from './pages/01.composition-setup.vue'
 import Ref from './pages/02.composition-ref.vue'
 import Hook from './pages/03.composition-hook.vue'
+import Watch from './pages/04.composition-watch.vue'
 
 // 2. 定义一些路由
 // 每个路由都需要映射到一个组件。
@@ -14,7 +15,7 @@ const routes = [
   { path: '/hello', component: HelloWorld },
   { path: '/setup', component: Setup },
   { path: '/ref', component: Ref },
-  { path: '/hook', component: Hook },
+  { path: '/watch', component: Watch },
 ]
 
 // 3. 创建路由实例并传递 `routes` 配置
