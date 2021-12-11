@@ -1,8 +1,8 @@
 <template>
   <count-down
     ref="countdown"
-    :defaultValue="value"
-    :auto-play="false"
+    :initialValue="value"
+    :auto-play="true"
     @turnOver="onTurnOver"
   ></count-down>
   <div class="handler">
@@ -12,20 +12,18 @@
   </div>
 </template>
 <script>
-import CountDown from "../components/CountDown.vue";
+import CountDown from "./CountDown.vue";
 export default {
   components: {
     CountDown,
   },
-  data() {
+  setup() {
     return {
       value: 5,
-    };
-  },
-  methods: {
-    onTurnOver() {
-      console.log("倒计时结束！");
-    },
+      onTurnOver(){
+        console.log("倒计时结束！");
+      }
+    }
   },
 };
 </script>

@@ -27,7 +27,7 @@
 <script>
 export default {
   props: {
-    defaultValue: {
+    initialValue: {
       type: Number,
       default: 10,
     },
@@ -44,7 +44,7 @@ export default {
   },
   computed: {
     process() {
-      const totalTime = this.defaultValue;
+      const totalTime = this.initialValue;
       const currentPercent = parseFloat(this.currentTime / totalTime).toFixed(
         2
       );
@@ -53,7 +53,7 @@ export default {
     },
   },
   created() {
-    this.currentTime = this.defaultValue;
+    this.currentTime = this.initialValue;
     if (this.autoPlay) {
       this.start();
     }
@@ -74,8 +74,8 @@ export default {
       clearInterval(this.timer);
     },
     reset() {
-      this.currentTime = this.defaultValue;
-      this.start();
+      this.stop()
+      this.currentTime = this.initialValue;
     },
   },
 };

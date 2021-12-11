@@ -1,9 +1,9 @@
 import {createRouter,createWebHashHistory} from "vue-router";
 // 1. 定义路由组件.
 // 也可以从其他文件导入
-import Index from './pages/Index.vue'
-import IndexSetup from './pages/IndexSetup.vue'
-import IndexScript from './pages/IndexScript.vue'
+import CountDown from './pages/CountDown/index.vue'
+import CountDownSetup from './pages/CountDownSetup/index.vue'
+import CountDownScript from './pages/CountDownScript/index.vue'
 import Setup from './pages/01.composition-setup.vue'
 import Ref from './pages/02.composition-ref.vue'
 import Hook from './pages/03.composition-hook.vue'
@@ -16,9 +16,9 @@ import Reactive from './pages/06.composition-reactive.vue'
 // 我们后面再讨论嵌套路由。
 const routes = [
   { path: '/', redirect: '/hello' },
-  { path: '/index', component: Index },
-  { path: '/indexsetup', component: IndexSetup },
-  { path: '/indexscript', component: IndexScript },
+  { path: '/count-down', component: CountDown },
+  { path: '/count-down-setup', component: CountDownSetup },
+  { path: '/count-down-script', component: CountDownScript },
   { path: '/setup', component: Setup },
   { path: '/ref', component: Ref },
   { path: '/hook', component: Hook },

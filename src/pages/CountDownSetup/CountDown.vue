@@ -28,7 +28,7 @@
 import { ref, computed } from 'vue'
 export default {
   props: {
-    defaultValue: {
+    initialValue: {
       type: Number,
       default: 10,
     },
@@ -38,10 +38,9 @@ export default {
     },
   },
   setup(props,context){
-    let currentTime = ref(props.defaultValue)
+    let currentTime = ref(props.initialValue)
     let timer = null // 定时器
 
-    // 启动
     const start = ()=> {
       clearInterval(timer);
       timer = setInterval(() => {
@@ -53,17 +52,16 @@ export default {
         currentTime.value -= 1;
       }, 1000);
     }
-    // 暂停
     const stop = () => {
       clearInterval(timer);
     }
-    // 重置
     const reset = ()=> {
-      currentTime.value = props.defaultValue;
+      stop()
+      currentTime.value = props.initialValue;
     }
     // 环形进度条
     const process = computed(()=>{
-      const totalTime = props.defaultValue;
+      const totalTime = props.initialValue;
       const currentPercent = parseFloat(currentTime.value / totalTime).toFixed(
         2
       );
