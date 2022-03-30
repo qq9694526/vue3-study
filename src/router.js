@@ -10,6 +10,7 @@ import Hook from './pages/03.composition-hook.vue'
 import Watch from './pages/04.composition-watch.vue'
 import Computed from './pages/05.composition-computed.vue'
 import Reactive from './pages/06.composition-reactive.vue'
+import temp from './pages/temp.vue'
 
 // 2. 定义一些路由
 // 每个路由都需要映射到一个组件。
@@ -25,6 +26,7 @@ const routes = [
   { path: '/watch', component: Watch },
   { path: '/computed', component: Computed },
   { path: '/reactive', component: Reactive },
+  { path: '/temp', component: temp },
 ]
 
 // 3. 创建路由实例并传递 `routes` 配置

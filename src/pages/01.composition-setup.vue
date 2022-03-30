@@ -12,11 +12,12 @@ export default {
     },
   },
   setup(props,context) {
-    // 一个可以实际使用它的地方。在 Vue 组件中，我们将此位置称为 setup
+    // 一个可以实际使用它的地方。在 Vue 组件中，我们将此位置称为 setup。它是组合式 API 的入口。
     // setup 选项在组件创建之前执行。 在 setup 中你应该避免使用 this，因为它不会找到组件实例。
     // setup 选项是一个接收 props 和 context 的函数
     console.log(props); // { user: '' }
     const defaultName = props.user||'码农胖大海'
+    // 暴露给模板
     return {
       defaultName
     }; // 这里返回的任何内容都可以用于组件的其余部分
